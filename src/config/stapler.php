@@ -51,30 +51,42 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Stapler Default Url
+    | Stapler Placeholder Class
     |--------------------------------------------------------------------------
     |
-    | The url (relative to your project document root) containing a default image
-    | that will be used for attachments that don't currently have an uploaded image
-    | attached to them.
+    | The class used to generate placeholders for attachments that don't 
+    | currently have an uploaded image attached to them.
     |
     */
 
-    'default_url' => '/:attachment/:style/missing.png',
+    'placeholder' => null,
 
     /*
     |--------------------------------------------------------------------------
-    | Stapler Default Style
+    | Stapler Placeholder Url
     |--------------------------------------------------------------------------
     |
-    | The default style returned from the Stapler file location helper methods.
-    | An unaltered version of uploaded file is always stored within the 'original'
-    | style, however the default_style can be set to point to any of the defined
-    | styles within the styles array.
+    | The url (relative to your project document root) containing a placeholder
+    | image that will be used for attachments that don't currently have an
+    | uploaded image attached to them.
     |
     */
 
-    'default_style' => 'original',
+    'placeholder_url' => '/:attachment/:style/missing.png',
+
+    /*
+    |--------------------------------------------------------------------------
+    | Stapler Placeholder Style
+    |--------------------------------------------------------------------------
+    |
+    | The placeholder style returned from the Stapler file location helper
+    | methods. An unaltered version of uploaded file is always stored within
+    | the 'original' style, however the placeholder_style can be set to point
+    | to any of the defined styles within the styles array.
+    |
+    */
+
+    'placeholder_style' => 'original',
 
     /*
     |--------------------------------------------------------------------------

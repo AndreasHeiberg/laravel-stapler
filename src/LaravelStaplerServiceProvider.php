@@ -73,6 +73,10 @@ class LaravelStaplerServiceProvider extends ServiceProvider
         $config = new IlluminateConfig(Config::getFacadeRoot(), 'laravel-stapler');
         Stapler::setConfigInstance($config);
 
+        if ($placeholder = $config->get('stapler.placeholder')) {
+            Stapler::setPlaceholderInstance(new $placeholder);   
+        }
+
         if (!$config->get('stapler.public_path')) {
             $config->set('stapler.public_path', realpath(public_path()));
         }
